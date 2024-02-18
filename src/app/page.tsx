@@ -33,7 +33,7 @@ function Home() {
           type="text"
           className="border-0 outline-0 pl-2"
         />
-        <button onClick={itemDispatch} className="bg-gray-200 p-2 rounded-full">
+        <button onClick={itemDispatch} className="bg-gray-200 hover:bg-black hover:text-white transition-all p-2 rounded-full">
           <MdOutlinePlaylistAdd />
         </button>
       </div>
