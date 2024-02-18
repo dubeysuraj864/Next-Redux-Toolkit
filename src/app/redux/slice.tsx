@@ -10,14 +10,22 @@ const Slice = createSlice({
   initialState,
   reducers: {
     addCount: (state: any, action: any) => {
-      const data = {
-        id: nanoid(),
-        name: action.payload,
-      };
-      state.counter.push(data);
-    },
+        const data = {
+          id: nanoid(),
+          name: action.payload,
+        };
+        state.counter = [...state.counter, data];
+      },
+      addItem: (state: any, action: any) => {
+        const data = {
+          id: nanoid(),
+          name: action.payload,
+        };
+        state.item = [...state.item, data];
+      }
+      
   },
 });
 
-export const { addCount } = Slice.actions;
+export const { addCount, addItem } = Slice.actions;
 export default Slice.reducer;

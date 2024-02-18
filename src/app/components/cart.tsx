@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 const Cart = () => {
   const cartCount = useSelector((data: any) => data.counter);
-  console.log(cartCount, "sdfsd");
   const uniqueNames: any = [...new Set(cartCount?.map((item: any) => item))];
 
   const value = uniqueNames[uniqueNames?.length - 1]?.name || 0;
